@@ -4,6 +4,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { UsuariosModule } from './usuarios/usuarios.module';
 
 @Module({
   imports: [
@@ -12,7 +13,7 @@ import { AppService } from './app.service';
       useUnifiedTopology: true,
       useNewUrlParser: true, //teste1 teste2 teste 3
     }),
-    //CatsModule,
+    UsuariosModule,
   ],
   controllers: [AppController],
   providers: [AppService],
