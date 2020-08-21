@@ -15,7 +15,7 @@ import { UsuariosService } from './usuarios.service';
 })
 export class UsuariosModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer
+    consumer //teste
       .apply(getFilters)
       .forRoutes({ path: 'usuarios', method: RequestMethod.GET });
   }
