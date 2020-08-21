@@ -6,4 +6,8 @@ export interface IUsuario extends Document {
   dataAniversario: Date;
   senha: string;
   ativo: boolean;
+  cidade: {
+    nome: string;
+    _id: string;
+  }
 }

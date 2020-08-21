@@ -8,9 +8,13 @@ export const UsuariosSchema = new mongoose.Schema(
   {
     nome: { type: String, required: true },
     login: { type: String, required: true },
-    dataAniversario: {type: Date, required: true},
+    dataAniversario: { type: Date, required: true },
     ativo: { type: Boolean, required: true },
     senha: { type: String, required: true },
+    cidade: {
+      nome: { type: String },
+      _id: { type: String },
+    },
   },
   {
     timestamps: true,
