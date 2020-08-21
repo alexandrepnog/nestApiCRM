@@ -6,8 +6,7 @@ const mongoo_paginate = require('mongoose-paginate-v2');
 
 export const CidadesSchema = new mongoose.Schema(
   {
-    nome: { type: String, required: true },
-    _id: { type: String, required: true }
+    nome: { type: String, required: true }
   },
   {
     timestamps: true,
