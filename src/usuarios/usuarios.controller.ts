@@ -27,21 +27,21 @@ export class UsuariosController {
     return this.usuarioService.getAll(req.filters, page, limit);
   }
 
-  @Get(':id')
-  async getBYId(@Param('id') id: string): Promise<IUsuario> {
-    return this.usuarioService.getById(id);
+  @Get(':_id')
+  async getBYId(@Param('_id') _id: string): Promise<IUsuario> {
+    return this.usuarioService.getById(_id);
   }
 
-  @Put(':id')
+  @Put(':_id')
   async update(
-    @Param('id') id: string,
+    @Param('_id') _id: string,
     @Body() usuario: IUsuario,
   ): Promise<IUsuario> {
-    return this.usuarioService.udpate(id, usuario);
+    return this.usuarioService.udpate(_id, usuario);
   }
 
-  @Delete(':id')
-  async delete(@Param('id') id: string) {
-    this.usuarioService.delete(id);
+  @Delete(':_id')
+  async delete(@Param('_id') _id: string) {
+    this.usuarioService.delete(_id);
   }
 }
